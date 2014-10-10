@@ -9,15 +9,7 @@ import android.os.Messenger;
 /**
  * Created by xhan on 10/10/14.
  */
-public class ControlServiceConnection implements ServiceConnection {
-    Messenger messenger = null;
-    @Override
-    public void onServiceConnected(ComponentName name, IBinder service) {
-        messenger = new Messenger(service);
-    }
+public class ControlServiceConnection extends ServiceConnectionBase {
 
-    @Override
-    public void onServiceDisconnected(ComponentName name) {
-        messenger = null;
-    }
+
 }

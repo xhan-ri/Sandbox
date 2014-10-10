@@ -8,16 +8,6 @@ import android.os.Messenger;
 /**
  * Created by xhan on 10/10/14.
  */
-public class UIServiceConnection implements ServiceConnection {
-    Messenger messenger;
-    @Override
-    public void onServiceConnected(ComponentName name, IBinder service) {
-        messenger = new Messenger(service);
+public class UIServiceConnection extends ServiceConnectionBase {
 
-    }
-
-    @Override
-    public void onServiceDisconnected(ComponentName name) {
-        messenger = null;
-    }
 }
